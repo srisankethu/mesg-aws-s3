@@ -1,0 +1,81 @@
+name: "MESG service for AWS S3"
+sid: mesg-aws-s3
+description: "Post and get data for AWS S3 buckets"
+tasks:
+        getData:
+                description: "Get data from AWS S3 bucket"
+                inputs:
+                        accessKeyId:
+                                name: "AWS accessKeyId"
+                                description: "AWS access key to interact"
+                                type: String
+                        secretAccessKey:
+                                name: "AWS secretAccessKey"
+                                description: "AWS secret access key"
+                                type: String
+                         bucket:
+                                 name: "AWS S3 bucket"
+                                 description: "Bucket Id"
+                                 type: String
+                         key:
+                                 name: "Key"
+                                 description: "request key"
+                                 type: String
+                outputs:
+                        success:
+                                name: "Success"
+                                description: "When the request is completed"
+                                data:
+                                        res:
+                                                name: "Data"
+                                                description: "Data pushed to the bucket"
+                                                type: String
+                        failure:
+                                name: "Failure"
+                                description: "When the requests fails"
+                                data:
+                                        message:
+                                                name: "Message"
+                                                description: "Error message"
+                                                type: String
+         postData:
+                description: "Get data from AWS S3 bucket"
+                inputs:
+                        accessKeyId:
+                                name: "AWS accessKeyId"
+                                description: "AWS access key to interact"
+                                type: String
+                        secretAccessKey:
+                                name: "AWS secretAccessKey"
+                                description: "AWS secret access key"
+                                type: String
+                         bucket:
+                                 name: "AWS S3 bucket"
+                                 description: "Bucket Id"
+                                 type: String
+                         key:
+                                 name: "Key"
+                                 description: "request key"
+                                 type: String
+                         body:
+                                 name: "Body"
+                                 description: "Post data to AWS S3 bucket"
+                                 type: String
+                outputs:
+                        success:
+                                name: "Success"
+                                description: "When the request is completed"
+                                data:
+                                        res:
+                                                name: "Data"
+                                                description: "Data pushed to the bucket"
+                                                type: String
+                        failure:
+                                name: "Failure"
+                                description: "When the requests fails"
+                                data:
+                                        message:
+                                                name: "Message"
+                                                description: "Error message"
+                                                type: String
+
