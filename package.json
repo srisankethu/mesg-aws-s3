@@ -23,6 +23,6 @@
   "homepage": "https://github.com/srisankethu/mesg-aws-s3/blob/master/README.md",
   "dependencies": {
     "@liteflow/service": "^1.0.7",
-    "aws-sdk": "^2.401.0"
+    "aws-sdk": "^2.814.0"
   }
 }
